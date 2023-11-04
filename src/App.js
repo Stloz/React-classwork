@@ -1,35 +1,23 @@
-import React from "react";
-import "./App.css";
-
-import { Product } from "./Product";
-
-const List = ({ list }) =>
-  list.map((item) => (
-    <React.Fragment key={item.id}>
-      <Product product={item} />
-    </React.Fragment>
-  ));
+import logo from './logo.svg';
+import './App.css';
 
 function App() {
-  const data = [
-    { id: 1, name: "iPhone 14 Pro", price: 999, inStock: false },
-    { id: 2, name: "iPhone 14", price: 999, inStock: true },
-    { id: 3, name: "iPhone 15", price: null, inStock: true },
-  ];
-
-  //   const list = data
-  //     .filter((item) => item.inStock)
-  //     .map((item) => <Product product={item} />);
-
   return (
     <div className="App">
-      <h1>Сторінка продукту</h1>
-
-      <List list={data} />
-
-      {/* {data.map((item) => (
-        <Product product={item} />
-      ))} */}
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
 }
